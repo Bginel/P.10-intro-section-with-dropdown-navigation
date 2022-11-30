@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,16 +9,16 @@ nav {
   display: flex;
 }
 
-nav .login{
+nav .login {
   position: absolute;
   right: 5%;
 }
 
-a.logo img{
+a.logo img {
   margin: 20px;
 }
 
-.btn-open {
+button.btn-open {
   display: none;
   background: white;
   cursor: pointer;
@@ -48,8 +48,8 @@ div.active {
   transition: all 0.3s ease;
 }
 
-@media (max-width:810px) {
-  .btn-open {
+@media (max-width: 810px) {
+  button.btn-open {
     display: block;
     z-index: 1;
     position: absolute;
@@ -58,8 +58,8 @@ div.active {
     margin: 15px;
     border: none;
   }
-  .btn-close {
-    display: none; 
+  button.btn-close {
+    display: none;
     z-index: 1;
     position: absolute;
     top: 1%;
