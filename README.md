@@ -4,7 +4,7 @@
 Indo um pouco além do desafio fiz duas seções, uma para o login e outra para o cadastro no site; deem uma olhada.
 </p>
 
-<p> O link do desafio: https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5/hub </p>
+<p> O link do desafio:https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5</p>
 
 <p> Imagens para nortea-lo ao desenvolvimento do desafio.<br>
 <p> Página inicial.<br>
