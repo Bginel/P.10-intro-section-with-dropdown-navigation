@@ -42,8 +42,6 @@ const headerOpacity = document.querySelector("header");
 
 function btnRegister() {
   openRegister.style.display = "block";
-  openRegister.innerHTML =
-    "<ul><li><img src='./images/logo.svg' /></li><li><button id='close-register'><img src='./images/icon-close-menu.svg' onclick='btnCloseRegister()' /></button></li></ul><h2>Register and be a member of snap.</h2><p class='p-register'>Name: <input type='text' id='name'></p><em id='name-error'></em><p class='p-register'>E-main: <input type='email' id='email'><em id='email-error'></em></p><p class='p-register'>Password: <input type='password' id='password'><em id='password-error'></em></p><button id='submit-register' onclick='submitRegister()'>Register</button>";
   mainOpacity.style.opacity = ".2";
   headerOpacity.style.opacity = ".2";
 }
@@ -79,7 +77,6 @@ function Name() {
 function email() {
   if (inputEmail.value == "") {
     inputEmail.style.border = "2px solid hsl(0, 100%, 74%)";
-    emailError.innerText = "E-mail cannot be empty";
   } else {
     return;
   }
@@ -116,8 +113,53 @@ function submitRegister() {
     inputPassword.value == "" ||
     validEmail.test(inputEmail.value) == false
   ) {
+    alert("Please check your registration");
+  } else {
     alert("Parabéns pelo cadastro!");
+    window.location.reload();
+  }
+}
+/* ------ login ----*/
+const btnLogin = document.querySelector(".login ul li");
+const btnCloseLogin = document.querySelector("#submit-login");
+const divLogin = document.querySelector("#login");
+
+const LoginEmail = document.querySelector("#login-email");
+const LoginPassword = document.querySelector("#login-password");
+
+function openLogin() {
+  divLogin.style.display = "block";
+  mainOpacity.style.opacity = ".2";
+  headerOpacity.style.opacity = ".2";
+}
+
+function closeLogin() {
+  divLogin.style.display = "none";
+  mainOpacity.style.opacity = "";
+  headerOpacity.style.opacity = "";
+}
+
+function chekingEmailLogin() {
+  if (validEmail.test(LoginEmail.value) == false) {
+    LoginEmail.style.border = "2px solid hsl(0, 100%, 74%)";
   } else {
     return;
+  }
+}
+
+function chekingPasswordLogin() {
+  if (LoginPassword.value == "") {
+    LoginPassword.style.border = "2px solid hsl(0, 100%, 74%)";
+  }
+}
+
+function submit() {
+  chekingEmailLogin();
+  chekingPasswordLogin();
+
+  if (validEmail.test(LoginEmail.value) == false || LoginPassword.value == "") {
+    return;
+  } else {
+    window.location.reload();
   }
 }

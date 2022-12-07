@@ -80,9 +80,11 @@
           </ul>
 
           <ul class="login">
-            <li><a href="#">Login</a></li>
+            <li onclick="openLogin()"><a href="#">Login</a></li>
             <li>
-              <button id="btn-register" onclick="btnRegister()">Register</button>
+              <button id="btn-register" onclick="btnRegister()">
+                Register
+              </button>
             </li>
           </ul>
         </div>
@@ -121,6 +123,37 @@
       </section>
     </main>
     <div id="register">
+      <ul>
+        <li><img src="./images/logo.svg" /></li>
+        <li>
+          <button id="close-register">
+            <img
+              src="./images/icon-close-menu.svg"
+              onclick="btnCloseRegister()"
+            />
+          </button>
+        </li>
+      </ul>
+      <h2>Register and be a member of snap.</h2>
+      <p class="p-register">Name: <input type="text" id="name" /></p>
+      <em id="name-error"></em>
+      <p class="p-register">
+        E-main: <input type="email" id="email" /><em id="email-error"></em>
+      </p>
+      <p class="p-register">
+        Password: <input type="password" id="password" /><em
+          id="password-error"
+        ></em>
+      </p>
+      <button id="submit-register" onclick="submitRegister()">Register</button>
+    </div>
+    <div id="login">
+      <button id="btn-close-login" onclick="closeLogin()"><img src="./images/close-circle.svg" /></button>
+      <h2>Login</h2>
+      <input id="login-email" type="email" placeholder="E-mail" />
+      <input id="login-password" type="password" placeholder="Password" />
+
+      <button id="submit-login" onclick="submit()">Enter</button>
     </div>
     <footer>
       <p class="link">

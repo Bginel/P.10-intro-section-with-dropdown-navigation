@@ -286,7 +286,7 @@ footer {
   }
 }
 
-/*------ Teste de registro ----- */
+/*------ validating registration ----- */
 #register {
   z-index: 1;
   width: 500px;
@@ -360,11 +360,82 @@ em {
 }
 #email-error {
   position: absolute;
-  left: 52%;
+  left: 46%;
   top: 58%;
 }
-#password-error{
+#password-error {
+  position: absolute;
+  left: 51%;
+  top: 72%;
+}
+
+/*------ login ----- */
+#login {
+  background-color: hsl(0, 0%, 8%);
+  z-index: 1;
+  width: 400px;
+  height: 320px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -200px;
+  margin-top: -160px;
+
+  border-radius: 8px;
+  box-shadow: 1px 1px 10px 1px hsl(0, 0%, 8%);
+
+  display: none;
+}
+
+#btn-close-login img {
+  cursor: pointer;
+  position: absolute;
+  width: 20px;
+  background-color: hsl(0, 0%, 8%);
+  top: 15px;
+  right: 15px;
+}
+
+#btn-close-login img:hover{
+  transform: scale(1.2);
+  transition: all 0.2s ease;
+}
+
+#login h2 {
+  margin-top: 25px;
+  margin-bottom: 45px;
+  color: #c4c2c2;
+  background-color:hsl(0, 0%, 8%);
+  border-bottom: 2px solid #c4c2c2;
+}
+
+#login input {
+  display: flex;
+  margin: 20px auto;
+  width: 80%;
+}
+
+#login input:focus {
+  border: none;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+#submit-login {
+  cursor: pointer;
+  width: 200px;
+  height: 43px;
+  color: hsl(0, 0%, 8%);
+  background-color: #c4c2c2;
+  border: none;
+  border-radius: 7px;
   position: absolute;
   left: 50%;
-  top: 71%;
+  margin-left: -100px;
+  bottom: 10%;
+}
+
+#submit-login:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease;
 }
