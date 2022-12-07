@@ -5,33 +5,140 @@
 
     <title>Treino javascript</title>
 
+    <!--style-->
     <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <nav>
-        <a class="logo" href="#"><img src="./imagens/logo.svg" alt="Logo" /></a>
-        <button class="btn-open" onclick="OpenNav()">
-          <img src="./imagens/icon-menu.svg" alt="" />
+        <a class="logo" href="#"><img src="./images/logo.svg" alt="Logo" /></a>
+        <button class="btn btn-open activeButton" onclick="handleNav()">
+          <img src="./images/icon-menu.svg" alt="" />
         </button>
-        <button class="btn-close" onclick="CloseNav()">
-          <img src="./imagens/icon-close-menu.svg" alt="" />
+        <button class="btn btn-close inactiveButton" onclick="handleNav()">
+          <img src="./images/icon-close-menu.svg" alt="" />
         </button>
         <div class="bg-nav">
           <ul class="nav">
-            <li>Home</li>
-            <li>Product</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li>
+              <a href="#" onclick="ListFeature()"
+                >Features
+                <img
+                  src="./images/icon-arrow-down.svg"
+                  class="imgFeatures list-active img" />
+                <img
+                  src="./images/icon-arrow-up.svg"
+                  class="imgFeatures list-inactive img"
+              /></a>
+            </li>
+            <ul class="features-dropdonw list-inactive">
+              <li>
+                <img src="./images/icon-todo.svg" style="margin: 0px 5px" />Todo
+                List
+              </li>
+              <li>
+                <img src="./images/icon-calendar.svg" style="margin: 0px 5px" />
+                Calendar
+              </li>
+              <li>
+                <img
+                  src="./images/icon-reminders.svg"
+                  style="margin: 0px 5px"
+                />
+                Reminders
+              </li>
+              <li>
+                <img src="./images/icon-planning.svg" style="margin: 0px 5px" />
+                Planning
+              </li>
+            </ul>
+            <li id="teste">
+              <a href="#" onclick="ListCompany()"
+                >Company
+                <img
+                  src="./images/icon-arrow-down.svg"
+                  class="imgCompany list-active img" />
+                <img
+                  src="./images/icon-arrow-up.svg"
+                  class="imgCompany list-inactive img"
+              /></a>
+            </li>
+            <ul class="company-dropdonw list-inactive">
+              <li>History</li>
+              <li>Our Team</li>
+              <li>Blog</li>
+            </ul>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
           </ul>
 
           <ul class="login">
-            <li>Login</li>
-            <li>Register</li>
+            <li><a href="#">Login</a></li>
+            <li>
+              <button id="btn-register" onclick="btnRegister()">Register</button>
+            </li>
           </ul>
         </div>
       </nav>
     </header>
+    <main>
+      <section>
+        <h1 id="H1-desktop">
+          Make <br />
+          remote work
+        </h1>
+        <h1 id="H1-mobile">Make remote work</h1>
+        <p>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <button id="learn-more">Learn more</button>
+        <ul class="clients">
+          <li>
+            <img src="./images/client-databiz.svg" />
+          </li>
+          <li>
+            <img src="./images/client-audiophile.svg" />
+          </li>
+          <li>
+            <img src="./images/client-meet.svg" />
+          </li>
+          <li>
+            <img src="./images/client-maker.svg" />
+          </li>
+        </ul>
+      </section>
+      <section>
+        <img src="./images/image-hero-desktop.png" class="img-desktop" />
+        <img src="./images/image-hero-mobile.png" class="img-mobile" />
+      </section>
+    </main>
+    <div id="register">
+    </div>
+    <footer>
+      <p class="link">
+        Challenge by
+        <a
+          class="link"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          class="link"
+          href="https://www.frontendmentor.io/profile/Bginel"
+          target="_blank"
+          >Bruno Ginél</a
+        >.
+      </p>
+    </footer>
 
     <script src="interacao.js"></script>
   </body>
